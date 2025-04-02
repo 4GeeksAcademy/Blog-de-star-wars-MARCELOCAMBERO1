@@ -30,6 +30,8 @@ const AllPlanets = () => {
           terrain={planet.terrain}
           population={planet.population}
         />
+        {<button>
+        }
       ))}
     </div>
   );
