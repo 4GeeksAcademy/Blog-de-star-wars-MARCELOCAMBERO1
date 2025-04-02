@@ -7,9 +7,10 @@ const AllPlanets = () => {
   useEffect(() => {
     const fetchPlanets = async () => {
       try {
-        const response = await fetch("https://swapi.dev/api/planets/");
+        const response = await fetch("https://swapi.tech/api/planets/");
         const data = await response.json();
         setPlanets(data.results);
+        console.log(data.results);
       } catch (error) {
         console.error("Error fetching planets:", error);
       }
@@ -17,21 +18,15 @@ const AllPlanets = () => {
 
     fetchPlanets();
   }, []);
-  
+
   return (
     <div className="grid grid-cols-2 gap-4">
       {planets.map((planet, index) => (
-        <CardPlanet 
-          key={index} 
-          name={planet.name} 
-          diameter={planet.diameter} 
-          climate={planet.climate} 
-          gravity={planet.gravity}
-          terrain={planet.terrain}
-          population={planet.population}
+        <CardPlanet
+          key={index}
+          name={planet.name}
+          id={planet.uid}
         />
-        {<button>
-        }
       ))}
     </div>
   );

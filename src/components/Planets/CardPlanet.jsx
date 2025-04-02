@@ -1,14 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const CardPlanet = ({ name, diameter, climate, gravity, terrain, population }) => {
+const CardPlanet = ({ name, id }) => {
+
+const navigate = useNavigate()
+
   return (
-    <div className="p-4 border rounded-lg shadow-md">
+    <div className="p-4 border rounded-lg shadow-md" onClick={() => {navigate(`/planet/${id}`)}}>
       <h2 className="text-xl font-bold">{name}</h2>
-      <p>Diameter: {diameter}</p>
-      <p>Climate: {climate}</p>
-      <p>Gravity: {gravity}</p>
-      <p>Terrain: {terrain}</p>
-      <p>Population: {population}</p>
     </div>
   );
 };
