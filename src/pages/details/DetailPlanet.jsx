@@ -16,6 +16,7 @@ const DetailPlanet = () => {
 
   useEffect(() => {
     const fetchPlanet = async () => {
+
       try {
         const response = await fetch(`https://swapi.tech/api/planets/${planet_id}`); //Cuando quiero meter JS dentro de un string debo utilizar las comillas invertidas, PARA QUE ME DEJE PONER EL SIMBOLO DEL DOLAR
         const data = await response.json();
@@ -36,13 +37,13 @@ const DetailPlanet = () => {
 
   useEffect(() => {
 
-    if (store.favorites.find(favorite => favorite.id === planet.id)) {
+    if (store.favorites.find(favorite => favorite.name === planet.name)) {
       setIsInFavorites(true)
     } else {
       setIsInFavorites(false)
     }
 
-  }, [store.favorites])
+  })
 
 
   if (loading) {
@@ -87,8 +88,8 @@ const DetailPlanet = () => {
                   onClick={() => {
                     dispatch({
                       type: 'add_to_favorites',
-                      payload: { name: planet.name, item: planet }
-                    })
+                      payload: { name: planet.name, item: {name: planet.name, uid: planet_id, type: "planet"} }
+                    });
                   }}>
                   Add to favorites
                 </button>

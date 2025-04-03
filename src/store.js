@@ -32,14 +32,15 @@ export default function storeReducer(store, action = {}) {
     case 'add_to_favorites':
 
       const { name, item } = action.payload
-
+      
+      // Buscamos que el nombre del objeto no exista ya dentro del array de favoritos
       if (store.favorites.find(favorite => favorite.name === name)){
         return
       }
 
       return {
         ...store,
-        favorites: [...store.favorites, item]
+        favorites: [...store.favorites, item] // todo lo que había en favorites más el nuevo objeto
       }
 
     case 'delete_from_favorites':
@@ -48,6 +49,7 @@ export default function storeReducer(store, action = {}) {
         ...store,
         favorites: store.favorites.filter(favorite => favorite.name !== action.payload)
       }
+    
     default:
       throw Error('Unknown action.');
   }
