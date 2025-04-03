@@ -1,0 +1,52 @@
+.detail-view {
+  /* Esta propiedad de abajo dice que al menos tiene que ser de alto como el alto de al pantalla dinámicamente hablando */
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.detail-card{
+  height: auto;
+  min-width: 650px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+  background-color: rgb(173, 173, 173);
+  border-radius: 10%;
+}
+
+.detail-card-title{
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+
+.detail-card-columns {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.detail-card-column-l {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.detail-card-column-r {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+} 
+
+.detail-card-property{
+  color:black
+  /* Le podemos dar propiedades a cada span (a cada `propiedad)*/
+}
+
