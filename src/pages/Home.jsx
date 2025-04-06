@@ -1,6 +1,7 @@
 
 import AllPeople from "../components/People/AllPeople.jsx";
 import AllPlanets from "../components/Planets/AllPlanets.jsx";
+import AllStarships from "../components/Starships/AllStarships.jsx";
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 
 export const Home = () => {
@@ -17,6 +18,9 @@ export const Home = () => {
 			</div>
 			<div className="People"><h2>PEOPLE</h2>
 			<AllPeople   />
+			</div>
+			<div className="Starships"><h2>Starships</h2>
+			<AllStarships  />
 			</div>
 			{/* ACA CIERRA HORIZONTAL SCROLL */}
 			{/* ListFavoritePlanets={FavoritePlanets} */}
