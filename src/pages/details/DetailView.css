@@ -4,6 +4,8 @@
   display: flex;
   justify-content: center;
   align-items:center;
+  background-color: #0d0d0d
+  font-family: 'Arial', sans-serif;
 }
 
 .detail-card{
@@ -13,9 +15,12 @@
   align-items:center;
   justify-content: center;
   flex-direction: column;
-  padding: 15px;
-  background-color: rgb(173, 173, 173);
-  border-radius: 10%;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 232, 31, 0.4);
+  border: 1px solid #ffe81f;
+  background-color: #1a1a1a;
 }
 
 .detail-card-title{
@@ -23,6 +28,8 @@
   font-size: 3rem;
   margin-top: 2%;
   margin-bottom: 4%;
+  color: #ffe81f;
+  text-shadow: 0 0 10px rgba(255, 232, 31, 0.6);
 }
 
 .detail-card-columns {
@@ -31,22 +38,44 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
+  gap: 20px;
 }
 
-.detail-card-column-l {
-  display: flex;
-  flex-direction: column;
-  padding: 5%;
-}
-
+.detail-card-column-l,
 .detail-card-column-r {
+  width: 50%;
   display: flex;
   flex-direction: column;
   padding: 5%;
-} 
+  gap: 10px;
+  color: #dcdcdc;
+  font-size: 1.2rem;
+}
 
 .detail-card-property{
-  color:black
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  font-weight: 500;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
   /* Le podemos dar propiedades a cada span (a cada `propiedad)*/
 }
+
+.detail-card button {
+  background-color: #ffe81f;
+  color: #0d0d0d;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(255, 232, 31, 0.6);
+}
+
+.detail-card button:hover {
+  background-color: #ffcc00;
+  box-shadow: 0 0 12px rgba(255, 232, 31, 1);
+}
+
 
