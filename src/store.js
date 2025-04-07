@@ -31,17 +31,19 @@ export default function storeReducer(store, action = {}) {
     // Creamos la función que añade a favoritos:
     case 'add_to_favorites':
 
-      const { name, item } = action.payload
+      const { name, item, itemType } = action.payload;
+
       
       // Buscamos que el nombre del objeto no exista ya dentro del array de favoritos
       if (store.favorites.find(favorite => favorite.name === name)){
-        return
+        return store;
       }
 
       return {
         ...store,
-        favorites: [...store.favorites, item] // todo lo que había en favorites más el nuevo objeto
+        favorites: [...store.favorites, { ...item, type: itemType }]
       }
+      
 
     case 'delete_from_favorites':
 

@@ -1,12 +1,12 @@
 .detail-view {
-  /* Esta propiedad de abajo dice que al menos tiene que ser de alto como el alto de al pantalla dinámicamente hablando */
+  background-color: #0d0d0d;
   min-height: 100dvh;
   display: flex;
   justify-content: center;
-  align-items:center;
-  background-color: #0d0d0d
-  font-family: 'Arial', sans-serif;
+  align-items: center;
+  padding: 40px 20px;
 }
+
 
 .detail-card{
   height: auto;

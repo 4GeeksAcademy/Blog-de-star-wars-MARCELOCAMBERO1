@@ -26,11 +26,11 @@ export const router = createBrowserRouter(
       <Route path="/" element={<Layout />} errorElement={<h1>Not found!</h1>} >
 
         {/* Nested Routes: Defines sub-routes within the BaseHome component. */}
-        <Route path= "/" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="/single/:theId" element={ <Single />} />  {/* Dynamic route for single items */}
         <Route path="/demo" element={<Demo />} />
         <Route path="/favorites" element={<Favorites />} />
-        <Route path="/planet/:planet_id" element={ <DetailPlanet />} /> 
+        <Route path="/planets/:planet_id" element={ <DetailPlanet />} /> 
         <Route path="/people/:people_id" element={ <DetailPeople />} />
         <Route path="/starships/:starship_id" element={ <DetailStarship />} />
       </Route>

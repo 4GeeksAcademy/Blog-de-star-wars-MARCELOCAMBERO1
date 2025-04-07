@@ -1,0 +1,54 @@
+.favorites-wrapper {
+    background-color: #0d0d0d;
+    min-height: 100dvh;
+    padding: 40px 20px;
+    color: #ffe81f;
+  }
+  
+  .favorites-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 232, 31, 0.5);
+  }
+  
+  .favorites-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .favorite-card {
+    background-color: #1a1a1a;
+    border: 1px solid #ffe81f;
+    padding: 20px 30px;
+    border-radius: 12px;
+    color: #ffe81f;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(255, 232, 31, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+    max-width: 200px;
+    text-decoration: none;
+  }
+  
+  .favorite-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 232, 31, 0.5);
+  }
+  
+  .favorites-subtitle {
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
+    text-align: center;
+    color: #ffe81f;
+    text-shadow: 0 0 6px rgba(255, 232, 31, 0.4);
+    border-bottom: 1px solid #ffe81f;
+    padding-bottom: 6px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  

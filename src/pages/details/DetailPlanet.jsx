@@ -36,15 +36,11 @@ const DetailPlanet = () => {
 
 
   useEffect(() => {
-
-    if (store.favorites.find(favorite => favorite.name === planet.name)) {
-      setIsInFavorites(true)
-    } else {
-      setIsInFavorites(false)
-    }
-
-  })
-
+    setIsInFavorites(
+      store.favorites.some(fav => fav.name === planet.name && fav.type === "planets")
+    );
+  }, [store.favorites, planet.name]);
+  
 
   if (loading) {
     return (
@@ -85,14 +81,19 @@ const DetailPlanet = () => {
             <div className="detail-card-buttons">
               {!isInFavorites ? (
                 <button className="detail-card-button-add btn btn-success"
-                  onClick={() => {
-                    dispatch({
-                      type: 'add_to_favorites',
-                      payload: { name: planet.name, item: {name: planet.name, uid: planet_id, type: "planet"} }
-                    });
-                  }}>
-                  Add to favorites
-                </button>
+                onClick={() => {
+                  dispatch({
+                    type: 'add_to_favorites',
+                    payload: {
+                      name: planet.name,
+                      item: { name: planet.name, uid: planet_id },
+                      itemType: "planets"
+                    }
+                  });
+                }}>
+                Add to favorites
+              </button>
+              
               ) : (
                 <button className="detail-card-button-delete btn btn-danger"
                   onClick={() => {

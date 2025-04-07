@@ -20,16 +20,17 @@ const AllPeople = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 gap-4">
-      {people.map((people, index) => (
+    <div className="all-people-scroll">
+      {people.map((person, index) => (
         <CardPeople
           key={index}
-          name={people.name}
-          id={people.uid}
+          name={person.name}
+          id={person.uid}
         />
       ))}
     </div>
   );
+  
 };
 
 export default AllPeople;

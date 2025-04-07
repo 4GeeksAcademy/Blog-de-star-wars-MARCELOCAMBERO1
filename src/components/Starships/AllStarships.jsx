@@ -20,7 +20,7 @@ const AllStarships = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="all-starships-scroll">
       {starships.map((starship, index) => (
         <CardStarship
           key={index}
@@ -30,6 +30,7 @@ const AllStarships = () => {
       ))}
     </div>
   );
+  
 };
 
 export default AllStarships;

@@ -20,7 +20,7 @@ const AllPlanets = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="all-planets-scroll">
       {planets.map((planet, index) => (
         <CardPlanet
           key={index}
@@ -30,6 +30,7 @@ const AllPlanets = () => {
       ))}
     </div>
   );
+  
 };
 
 export default AllPlanets;

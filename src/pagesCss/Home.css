@@ -1,0 +1,74 @@
+.home-wrapper {
+    background-color: #0d0d0d;
+    min-height: 100dvh;
+    padding: 40px 20px;
+    color: #ffe81f;
+  }
+  
+  .section-group {
+    margin-bottom: 60px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffe81f;
+    text-shadow: 0 0 10px rgba(255, 232, 31, 0.5);
+    border-bottom: 2px solid #ffe81f;
+    padding-bottom: 10px;
+    width: fit-content;
+    margin: 0 auto 40px;
+  }
+  
+  .scroll-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #ffe81f transparent;
+  }
+
+  .all-planets-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .all-planets-scroll > * {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+  
+
+  .all-people-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .all-people-scroll > * {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+  
+
+  .all-starships-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .all-starships-scroll > * {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+  
